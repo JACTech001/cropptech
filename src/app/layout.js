@@ -5,8 +5,8 @@ export const metadata = {
   description: "CroppTech With Commerce is a commerce-led business group bringing together commerce, business services and technology to help individuals and organisations establish, operate and grow.",
   applicationName: "CroppTech With Commerce",
   icons: {
-    icon: "/cropplogo.jpeg",
-    shortcut: "/cropplogo.jpeg",
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
     apple: "/cropplogo.jpeg"
   }
 };
