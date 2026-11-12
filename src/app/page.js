@@ -41,10 +41,10 @@ export default function HomePage() {
   const close = () => setMenuOpen(false);
   return (
     <main id="top">
-      <header className="header"><div className="shell header-inner">
+      <header className="header" onKeyDown={(event) => { if (event.key === "Escape") close(); }}><div className="shell header-inner">
         <Brand />
-        <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close navigation" : "Open navigation"}>{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>
-        <nav className={"navigation" + (menuOpen ? " navigation-open" : "")} aria-label="Main navigation">
+        <button className="mobile-menu" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen} aria-controls="primary-navigation">{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>
+        <nav id="primary-navigation" className={"navigation" + (menuOpen ? " navigation-open" : "")} aria-label="Main navigation">
           {nav.map(([label, href]) => <a key={label} href={href} onClick={close}>{label}</a>)}
           <a className="nav-enquire" href="#contact" onClick={close}>Enquire <ArrowUpRight size={15} /></a>
         </nav>
