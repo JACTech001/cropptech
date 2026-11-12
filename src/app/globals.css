@@ -235,29 +235,29 @@ button { font:inherit; }
 }
 
 
-/* CroppTech header logo sizing and rounded image corners. */
+/* CroppTech header logo: crop the square artwork to its lettering area. */
 .brand {
   gap: 14px;
   flex-shrink: 0;
+  align-items: center;
 }
 .brand-icon {
+  display: block;
   width: 52px;
   height: 52px;
   border-radius: 50%;
   object-fit: cover;
-  overflow: hidden;
   flex: 0 0 52px;
 }
 .brand-wordmark {
   display: block;
   width: 300px;
-  height: 300px;
+  height: 74px;
   max-width: none;
-  border-radius: 50%;
-  object-fit: contain;
-  object-position: left center;
-  overflow: hidden;
-  flex: 0 0 290px;
+  border-radius: 14px;
+  object-fit: cover;
+  object-position: center 60%;
+  flex: 0 0 300px;
 }
 @media (max-width: 900px) {
   .brand-wordmark {
