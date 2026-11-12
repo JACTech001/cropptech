@@ -162,20 +162,26 @@ button { font:inherit; }
   *,*::before,*::after { transition-duration:.01ms !important; animation-duration:.01ms !important; }
 }
 
-/* CroppTech brand rule: pure white surfaces, red accents, black typography only. */
-.hero, .perspective-section, .footer { background:#FFFFFF; color:#000000; }
-.hero-overline { color:#666666; }
-.hero-summary, .quiet-link, .aside-copy, .aside-foot, .hero-base { color:#666666; }
-.hero-aside { border-left-color:#E5E5E5; }
-.hero-base { border-top-color:#E5E5E5; }
-.hero-base a { color:#000000; }
-.perspective-section .section-label-light { color:#666666; }
-.principle-list, .principle-row { border-color:#E5E5E5; }
-.principle-row p { color:#666666; }
-.footer { border-top:1px solid #E5E5E5; }
-.brand-inverse { color:#000000; }
-.footer-brand > p, .footer-links a, .footer-top-link, .footer-bottom { color:#666666; }
-.footer-bottom { border-top-color:#E5E5E5; }
-.footer-links a:hover, .footer-top-link:hover { color:#A40000; }
+/* CroppTech brand rule: white and brand-red surfaces; black is reserved for typography. */
+.hero, .perspective-section, .footer { background:#A40000; color:#FFFFFF; }
+.hero-overline { color:#FFFFFF; }
+.hero-overline span, .aside-rule { background:#FFFFFF; }
+.hero h1 em, .company-heading h2 em, .section-intro h2 em, .capabilities-intro h2 em, .perspective-title h2 em, .contact-heading h2 em { color:#000000; }
+.hero-summary, .quiet-link, .aside-copy, .aside-foot, .hero-base { color:#F3DADA; }
+.hero-aside { border-left-color:rgba(255,255,255,.35); }
+.hero-base { border-top-color:rgba(255,255,255,.3); }
+.hero-base a { color:#FFFFFF; }
+.aside-index, .aside-foot svg { color:#FFFFFF; }
+.perspective-section .section-label-light { color:#FFFFFF; }
+.perspective-section .section-label-light > span { color:#FFFFFF; }
+.principle-list, .principle-row { border-color:rgba(255,255,255,.3); }
+.principle-row > span { color:#FFFFFF; }
+.principle-row h3 { color:#FFFFFF; }
+.principle-row p { color:#F3DADA; }
+.footer { border-top:1px solid rgba(255,255,255,.25); }
+.brand-inverse { color:#FFFFFF; }
+.footer-brand > p, .footer-links a, .footer-top-link, .footer-bottom { color:#F3DADA; }
+.footer-bottom { border-top-color:rgba(255,255,255,.3); }
+.footer-links a:hover, .footer-top-link:hover { color:#FFFFFF; }
 .navigation .nav-enquire { background:#A40000; color:#FFFFFF; }
 .navigation .nav-enquire:hover { background:#7D0000; color:#FFFFFF; }
