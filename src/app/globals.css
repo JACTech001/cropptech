@@ -351,3 +351,47 @@ button { font:inherit; }
   font-size: 10px;
   line-height: 1.7;
 }
+
+
+/* Contact details */
+.contact-methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.contact-method {
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 14px 18px 0;
+  color: var(--red);
+}
+.contact-method + .contact-method {
+  border-left: 1px solid var(--line);
+  padding-left: 18px;
+}
+.contact-method > span {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.contact-method strong {
+  color: var(--black);
+  font-size: 12px;
+}
+.contact-method small {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+.contact-method-pending { cursor: default; }
+@media (max-width: 680px) {
+  .contact-methods { grid-template-columns: 1fr; }
+  .contact-method + .contact-method {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+  }
+}
