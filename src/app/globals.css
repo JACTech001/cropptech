@@ -191,7 +191,7 @@ button { font:inherit; }
 .header { background:#A40000; border-bottom:1px solid #850000; }
 .brand { color:#FFFFFF; }
 .brand-icon { display:block; width:42px; height:42px; object-fit:contain; flex:0 0 auto; }
-.brand-wordmark { display:block; width:260px; height:260px; object-fit:contain; object-position:left center; }
+.brand-wordmark { display:block; width:176px; height:48px; object-fit:contain; object-position:left center; }
 .navigation > a { color:#FFFFFF; }
 .navigation > a:hover { color:#F3DADA; }
 .navigation .nav-enquire { background:#FFFFFF; color:#A40000; }
@@ -245,7 +245,7 @@ button { font:inherit; }
 }
 .brand-wordmark {
   width:220px;
-  height:58px;
+  height:150px;
   object-fit:contain;
   object-position:left center;
 }
@@ -254,18 +254,4 @@ button { font:inherit; }
   .brand-icon { width:40px; height:40px; }
   .brand-wordmark { width:176px; height:48px; }
   .brand { gap:10px; }
-}
-
-
-/* Final logo sizing override: make the supplied wordmark clearly readable. */
-.brand { gap:14px; flex-shrink:0; }
-.brand-icon { width:52px; height:52px; border-radius:50%; object-fit:cover; flex:0 0 52px; }
-.brand-wordmark { width:290px; height:74px; max-width:none; object-fit:contain; object-position:left center; flex:0 0 290px; }
-@media (max-width:900px) {
-  .brand-wordmark { width:245px; height:68px; flex-basis:245px; }
-}
-@media (max-width:680px) {
-  .brand { gap:10px; }
-  .brand-icon { width:42px; height:42px; flex-basis:42px; }
-  .brand-wordmark { width:205px; height:58px; flex-basis:205px; }
 }
