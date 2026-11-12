@@ -233,3 +233,25 @@ button { font:inherit; }
   .hero { background-position:57% center; }
   .hero::before { background:linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.38)); }
 }
+
+
+/* Refined header logo proportions. */
+.brand-icon {
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  overflow:hidden;
+}
+.brand-wordmark {
+  width:220px;
+  height:58px;
+  object-fit:contain;
+  object-position:left center;
+}
+.brand { gap:13px; }
+@media (max-width:680px) {
+  .brand-icon { width:40px; height:40px; }
+  .brand-wordmark { width:176px; height:48px; }
+  .brand { gap:10px; }
+}
