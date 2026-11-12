@@ -52,12 +52,12 @@ export default function HomePage() {
 
       <section className="hero"><div className="shell hero-layout">
         <div className="hero-main">
-          <div className="hero-overline"><span /> A COMMERCE-LED BUSINESS GROUP</div>
+          <div className="hero-overline">A COMMERCE-LED BUSINESS GROUP</div>
           <h1>Building business.<br /><em>Creating</em> opportunity.</h1>
           <p className="hero-summary">CroppTech brings commerce, business services and technology together to help people and organisations establish, operate and grow.</p>
           <div className="hero-links"><a className="button-primary" href="#businesses">Explore CroppTech <ArrowUpRight size={17} /></a><a className="quiet-link" href="#company">Our company <ArrowDown size={15} /></a></div>
         </div>
-        <aside className="hero-aside"><div className="aside-rule" /><p className="aside-heading">A business group<br />for a connected world.</p><p className="aside-copy">Commercial thinking. Practical solutions. A wider view of what business can become.</p><div className="aside-foot"><Globe2 size={16} /><span>OPEN TO GLOBAL OPPORTUNITY</span></div></aside>
+        <aside className="hero-aside"><p className="aside-heading">A business group<br />for a connected world.</p><p className="aside-copy">Commercial thinking. Practical solutions. A wider view of what business can become.</p><div className="aside-foot"><Globe2 size={16} /><span>OPEN TO GLOBAL OPPORTUNITY</span></div></aside>
       </div><div className="hero-base shell"><span>COMMERCE <b>·</b> BUSINESS <b>·</b> TECHNOLOGY</span><a href="#company">Discover the company <ArrowDown size={14} /></a></div></section>
 
       <section className="company-section" id="company"><div className="shell company-grid">
