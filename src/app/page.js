@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowDown, ArrowRight, ArrowUpRight, Menu, X, Building2, ShoppingCart, MonitorCog, Megaphone, BriefcaseBusiness, Globe2, ChevronDown, Instagram, Facebook, Linkedin } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight, Menu, X, Building2, ShoppingCart, MonitorCog, Megaphone, BriefcaseBusiness, Globe2, ChevronDown, Instagram, Facebook, Linkedin, Mail, Phone } from "lucide-react";
 
 const areas = [
   { title: "Commerce", sub: "Trade, products & market access", text: "We build and operate commerce initiatives that bring products, customers and opportunities together across digital and physical channels.", icon: ShoppingCart, services: ["E-commerce business setup", "Online store development", "Product and sales management", "Procurement and supplier coordination", "B2B and B2C commerce"] },
@@ -85,7 +85,10 @@ export default function HomePage() {
 
       <section className="contact-section" id="contact"><div className="shell contact-layout">
         <div className="contact-heading"><Label>CONTACT CROPPTECH</Label><h2>Let’s talk<br /><em>business.</em></h2></div>
-        <div className="contact-content"><p className="contact-lead">Whether you are developing an idea, looking for business support or exploring a partnership, we welcome the conversation.</p><div className="contact-placeholder"><Building2 size={20} /><div><strong>Business enquiries</strong><span>Our official contact channels will be published here.</span></div></div>
+        <div className="contact-content"><p className="contact-lead">Whether you are developing an idea, looking for business support or exploring a partnership, we welcome the conversation.</p><div className="contact-methods">
+            <a className="contact-method" href="mailto:info@cropptech.com"><Mail size={20} /><span><strong>Email</strong><small>info@cropptech.com</small></span></a>
+            <div className="contact-method contact-method-pending"><Phone size={20} /><span><strong>Phone</strong><small>Coming soon</small></span></div>
+          </div>
           <div className="social-contact">
             <strong>Connect with CroppTech</strong>
             <div className="social-icons" aria-label="Social media platforms">
