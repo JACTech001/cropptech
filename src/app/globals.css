@@ -185,3 +185,23 @@ button { font:inherit; }
 .footer-links a:hover, .footer-top-link:hover { color:#FFFFFF; }
 .navigation .nav-enquire { background:#A40000; color:#FFFFFF; }
 .navigation .nav-enquire:hover { background:#7D0000; color:#FFFFFF; }
+
+
+/* Hero photography: Unsplash office collaboration image, with a CroppTech-red overlay for readable copy. */
+.hero {
+  background-color:#A40000;
+  background-image:
+    linear-gradient(90deg, rgba(164,0,0,.94) 0%, rgba(164,0,0,.82) 43%, rgba(164,0,0,.38) 100%),
+    url("https://images.unsplash.com/photo-1758691737212-3eebbc8f84ed?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=85&w=2400");
+  background-size:cover;
+  background-position:center 48%;
+  background-repeat:no-repeat;
+}
+@media (max-width:680px) {
+  .hero {
+    background-image:
+      linear-gradient(90deg, rgba(164,0,0,.91), rgba(164,0,0,.72)),
+      url("https://images.unsplash.com/photo-1758691737212-3eebbc8f84ed?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=85&w=1600");
+    background-position:center center;
+  }
+}
