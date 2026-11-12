@@ -201,7 +201,7 @@ button { font:inherit; }
 .mobile-menu { color:#FFFFFF; }
 .hero {
   background-color:#FFFFFF;
-  background-image:url("https://horizons-cdn.hostinger.com/4eca9c3a-b40c-4dc7-a5fa-ba271def5534/foto-bdin3-Q0rm8.png");
+  background-image:url("/hero-image1.webp");
   background-size:cover;
   background-position:center 48%;
   background-repeat:no-repeat;
@@ -233,8 +233,8 @@ button { font:inherit; }
   .navigation > a { color:#FFFFFF; border-bottom-color:rgba(255,255,255,.22); }
   .navigation .nav-enquire { background:#FFFFFF; color:#A40000; }
   .hero {
-    background-size:auto 100%;
-    background-position:58% center;
+    background-size:cover;
+    background-position:center center;
   }
   .hero::before {
     background:linear-gradient(90deg,rgba(0,0,0,.46),rgba(0,0,0,.20));
