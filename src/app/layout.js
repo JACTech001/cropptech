@@ -3,7 +3,12 @@ import "./globals.css";
 export const metadata = {
   title: "CroppTech With Commerce | Building Business. Creating Opportunity.",
   description: "CroppTech With Commerce is a commerce-led business group bringing together commerce, business services and technology to help individuals and organisations establish, operate and grow.",
-  applicationName: "CroppTech With Commerce"
+  applicationName: "CroppTech With Commerce",
+  icons: {
+    icon: "/cropplogo.jpeg",
+    shortcut: "/cropplogo.jpeg",
+    apple: "/cropplogo.jpeg"
+  }
 };
 
 export default function RootLayout({ children }) {
