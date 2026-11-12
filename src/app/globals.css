@@ -187,21 +187,31 @@ button { font:inherit; }
 .navigation .nav-enquire:hover { background:#7D0000; color:#FFFFFF; }
 
 
-/* Hero photography: Unsplash office collaboration image, with a CroppTech-red overlay for readable copy. */
+/* Hero photography: natural office image with a soft white fade behind the copy. */
 .hero {
-  background-color:#A40000;
+  background-color:#FFFFFF;
   background-image:
-    linear-gradient(90deg, rgba(164,0,0,.94) 0%, rgba(164,0,0,.82) 43%, rgba(164,0,0,.38) 100%),
-    url("https://images.unsplash.com/photo-1758691737212-3eebbc8f84ed?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=85&w=2400");
+    linear-gradient(90deg, rgba(255,255,255,.96) 0%, rgba(255,255,255,.88) 38%, rgba(255,255,255,.22) 100%),
+    url("https://images.unsplash.com/photo-1758691737212-3eebbc8f84ed?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaGdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=85&w=2400");
   background-size:cover;
   background-position:center 48%;
   background-repeat:no-repeat;
+  color:#000000;
 }
+.hero-overline { color:#000000; }
+.hero-overline span { background:#A40000; }
+.hero-summary, .quiet-link, .aside-copy, .aside-foot, .hero-base { color:#333333; }
+.hero-aside { border-left-color:rgba(0,0,0,.2); }
+.aside-heading { color:#000000; }
+.aside-index, .aside-foot svg { color:#A40000; }
+.aside-rule { background:#A40000; }
+.hero-base { border-top-color:rgba(0,0,0,.18); }
+.hero-base a { color:#000000; }
 @media (max-width:680px) {
   .hero {
     background-image:
-      linear-gradient(90deg, rgba(164,0,0,.91), rgba(164,0,0,.72)),
-      url("https://images.unsplash.com/photo-1758691737212-3eebbc8f84ed?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=85&w=1600");
+      linear-gradient(90deg, rgba(255,255,255,.94), rgba(255,255,255,.72)),
+      url("https://images.unsplash.com/photo-1758691737212-3eebbc8f84ed?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaGdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=85&w=1600");
     background-position:center center;
   }
 }
