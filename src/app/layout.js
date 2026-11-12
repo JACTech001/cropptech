@@ -1,9 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "CroppTech With Commerce | Commerce First. Technology Driven.",
-  description:
-    "CroppTech With Commerce is a commerce-driven technology and business company building businesses, powering commerce and delivering solutions for a connected global economy.",
+  title: "CroppTech With Commerce | Building Business. Creating Opportunity.",
+  description: "CroppTech With Commerce is a commerce-led business group bringing together commerce, business services and technology to help individuals and organisations establish, operate and grow.",
   applicationName: "CroppTech With Commerce"
 };
 
