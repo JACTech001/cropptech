@@ -33,7 +33,7 @@ function Brand({ inverse = false }) {
   </a>;
 }
 function Label({ children, light = false }) {
-  return <div className={"section-label" + (light ? " section-label-light" : "")}><i />{children}</div>;
+  return <div className={"section-label" + (light ? " section-label-light" : "")}>{children}</div>;
 }
 
 export default function HomePage() {
