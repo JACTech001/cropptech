@@ -311,3 +311,43 @@ button { font:inherit; }
     transform: translateX(-41px);
   }
 }
+
+
+/* Social contact platform marks */
+.social-contact {
+  padding: 25px 0 22px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.social-contact > strong {
+  font-size: 12px;
+  color: var(--black);
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.social-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E5E5E5;
+  border-radius: 50%;
+  color: var(--red);
+  background: #FFFFFF;
+}
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+}
+.social-note {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.7;
+}
