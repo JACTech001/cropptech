@@ -232,8 +232,13 @@ button { font:inherit; }
   .navigation { background:#A40000; }
   .navigation > a { color:#FFFFFF; border-bottom-color:rgba(255,255,255,.22); }
   .navigation .nav-enquire { background:#FFFFFF; color:#A40000; }
-  .hero { background-position:57% center; }
-  .hero::before { background:linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.38)); }
+  .hero {
+    background-size:auto 100%;
+    background-position:58% center;
+  }
+  .hero::before {
+    background:linear-gradient(90deg,rgba(0,0,0,.46),rgba(0,0,0,.20));
+  }
 }
 
 
