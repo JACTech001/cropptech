@@ -400,3 +400,39 @@ button { font:inherit; }
     padding-left: 0;
   }
 }
+
+
+/* Business-area photography */
+.business-card {
+  overflow: hidden;
+}
+.business-card-image {
+  width: calc(100% + 70px);
+  height: 184px;
+  margin: -32px -35px 27px;
+  overflow: hidden;
+  background: #F3F3F3;
+}
+.business-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .55s ease;
+}
+.business-card:hover .business-card-image img {
+  transform: scale(1.045);
+}
+@media (max-width: 680px) {
+  .business-card-image {
+    width: calc(100% + 48px);
+    height: 190px;
+    margin: -26px -24px 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .business-card-image img {
+    transition: none;
+  }
+}
