@@ -235,7 +235,7 @@ button { font:inherit; }
 }
 
 
-/* CroppTech brand red and vertically centred navbar identity. */
+/* CroppTech brand red and tightly cropped, vertically centred navbar identity. */
 :root { --red: #A40000; }
 .header {
   background: var(--red);
@@ -261,21 +261,34 @@ button { font:inherit; }
   object-fit: cover;
   flex: 0 0 52px;
 }
+.brand-wordmark-window {
+  display: block;
+  width: 240px;
+  height: 66px;
+  overflow: hidden;
+  border-radius: 14px;
+  flex: 0 0 240px;
+}
 .brand-wordmark {
   display: block;
   width: 300px;
   height: 66px;
   max-width: none;
-  border-radius: 14px;
+  border-radius: 0;
   object-fit: cover;
   object-position: center 50%;
-  flex: 0 0 300px;
+  transform: translateX(-60px);
 }
 @media (max-width: 900px) {
+  .brand-wordmark-window {
+    width: 196px;
+    height: 64px;
+    flex-basis: 196px;
+  }
   .brand-wordmark {
     width: 245px;
     height: 64px;
-    flex-basis: 245px;
+    transform: translateX(-49px);
   }
 }
 @media (max-width: 680px) {
@@ -285,9 +298,14 @@ button { font:inherit; }
     height: 42px;
     flex-basis: 42px;
   }
+  .brand-wordmark-window {
+    width: 164px;
+    height: 54px;
+    flex-basis: 164px;
+  }
   .brand-wordmark {
     width: 205px;
     height: 54px;
-    flex-basis: 205px;
+    transform: translateX(-41px);
   }
 }
