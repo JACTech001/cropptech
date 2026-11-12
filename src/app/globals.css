@@ -191,7 +191,7 @@ button { font:inherit; }
 .header { background:#A40000; border-bottom:1px solid #850000; }
 .brand { color:#FFFFFF; }
 .brand-icon { display:block; width:42px; height:42px; object-fit:contain; flex:0 0 auto; }
-.brand-wordmark { display:block; width:176px; height:48px; object-fit:contain; object-position:left center; }
+.brand-wordmark { display:block; width:260px; height:260px; object-fit:contain; object-position:left center; }
 .navigation > a { color:#FFFFFF; }
 .navigation > a:hover { color:#F3DADA; }
 .navigation .nav-enquire { background:#FFFFFF; color:#A40000; }
