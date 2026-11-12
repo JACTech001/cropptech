@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowDown, ArrowRight, ArrowUpRight, Menu, X, Building2, ShoppingCart, MonitorCog, Megaphone, BriefcaseBusiness, Globe2, ChevronDown } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight, Menu, X, Building2, ShoppingCart, MonitorCog, Megaphone, BriefcaseBusiness, Globe2, ChevronDown, Instagram, Facebook, Linkedin } from "lucide-react";
 
 const areas = [
   { title: "Commerce", sub: "Trade, products & market access", text: "We build and operate commerce initiatives that bring products, customers and opportunities together across digital and physical channels.", icon: ShoppingCart, services: ["E-commerce business setup", "Online store development", "Product and sales management", "Procurement and supplier coordination", "B2B and B2C commerce"] },
@@ -85,7 +85,18 @@ export default function HomePage() {
 
       <section className="contact-section" id="contact"><div className="shell contact-layout">
         <div className="contact-heading"><Label>CONTACT CROPPTECH</Label><h2>Let’s talk<br /><em>business.</em></h2></div>
-        <div className="contact-content"><p className="contact-lead">Whether you are developing an idea, looking for business support or exploring a partnership, we welcome the conversation.</p><div className="contact-placeholder"><Building2 size={20} /><div><strong>Business enquiries</strong><span>Our official contact channels will be published here.</span></div></div><p className="contact-small">CroppTech With Commerce welcomes enquiries from individuals, businesses and potential partners.</p></div>
+        <div className="contact-content"><p className="contact-lead">Whether you are developing an idea, looking for business support or exploring a partnership, we welcome the conversation.</p><div className="contact-placeholder"><Building2 size={20} /><div><strong>Business enquiries</strong><span>Our official contact channels will be published here.</span></div></div>
+          <div className="social-contact">
+            <strong>Connect with CroppTech</strong>
+            <div className="social-icons" aria-label="Social media platforms">
+              <span className="social-icon" title="X" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.78 7.75L23.2 22h-6.25l-4.9-7.42L5.55 22H2.4l7.25-8.29L1.8 2h6.4l4.43 6.76L18.9 2Zm-1.1 18h1.73L7.28 3.9H5.42L17.8 20Z" fill="currentColor"/></svg></span>
+              <span className="social-icon" title="TikTok" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 7.1a6.9 6.9 0 0 1-4.2-1.4v8.1a6.1 6.1 0 1 1-6.1-6.1c.4 0 .8 0 1.2.1v3.4a2.8 2.8 0 1 0 1.8 2.6V2h3.3c.2 2.2 1.7 3.9 4 4.2v.9Z" fill="currentColor"/></svg></span>
+              <span className="social-icon" title="Instagram" aria-label="Instagram"><Instagram size={21} strokeWidth={1.8} /></span>
+              <span className="social-icon" title="Facebook" aria-label="Facebook"><Facebook size={21} strokeWidth={1.8} /></span>
+              <span className="social-icon" title="LinkedIn" aria-label="LinkedIn"><Linkedin size={21} strokeWidth={1.8} /></span>
+            </div>
+            <span className="social-note">Social profile links will be connected once the official accounts are confirmed.</span>
+          </div><p className="contact-small">CroppTech With Commerce welcomes enquiries from individuals, businesses and potential partners.</p></div>
       </div></section>
 
       <footer className="footer"><div className="shell footer-main"><div className="footer-brand"><Brand inverse /><p>A commerce-led business group.</p></div><div className="footer-links">{nav.map(([label, href]) => <a key={label} href={href}>{label}</a>)}</div><a className="footer-top-link" href="#top">Back to top <ArrowUpRight size={15} /></a></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} CroppTech With Commerce. All rights reserved.</span><span>Commerce · Business · Technology</span></div></footer>
