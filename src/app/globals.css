@@ -255,3 +255,27 @@ button { font:inherit; }
   .brand-wordmark { width:176px; height:48px; }
   .brand { gap:10px; }
 }
+<<<<<<< HEAD
+=======
+
+
+/* Final logo sizing override: make the supplied wordmark clearly readable. */
+.brand { gap:14px; flex-shrink:0; }
+.brand-icon { width:52px; height:52px; border-radius:50%; object-fit:cover; flex:0 0 52px; }
+.brand-wordmark { width:290px; height:74px; max-width:none; object-fit:contain; object-position:left center; flex:0 0 290px; }
+@media (max-width:900px) {
+  .brand-wordmark { width:245px; height:68px; flex-basis:245px; }
+}
+@media (max-width:680px) {
+  .brand { gap:10px; }
+  .brand-icon { width:42px; height:42px; flex-basis:42px; }
+  .brand-wordmark { width:205px; height:58px; flex-basis:205px; }
+}
+
+
+/* Rounded wordmark image edges */
+.brand-wordmark {
+  border-radius: 14px;
+  overflow: hidden;
+}
+>>>>>>> 0f8cebff86cf039e3625cda64449641dbf0b24b7
