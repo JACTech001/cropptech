@@ -27,7 +27,9 @@ const nav = [["Company", "#company"], ["Our businesses", "#businesses"], ["Capab
 function Brand({ inverse = false }) {
   return <a className={"brand" + (inverse ? " brand-inverse" : "")} href="#top" aria-label="CroppTech With Commerce">
     <img className="brand-icon" src="/cropplogo.jpeg" alt="" />
-    <img className="brand-wordmark" src="/cropplogotext.jpeg" alt="CroppTech With Commerce" />
+    <span className="brand-wordmark-window">
+      <img className="brand-wordmark" src="/cropplogotext.jpeg" alt="CroppTech With Commerce" />
+    </span>
   </a>;
 }
 function Label({ children, light = false }) {
