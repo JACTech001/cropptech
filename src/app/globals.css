@@ -187,34 +187,49 @@ button { font:inherit; }
 .navigation .nav-enquire:hover { background:#7D0000; color:#FFFFFF; }
 
 
-/* CroppTech logo and hero photo refinements. */
-.brand-logo { display:block; width:190px; height:58px; object-fit:contain; object-position:left center; }
-.footer .brand-logo { filter:none; }
+/* CroppTech brand navigation, separate logo assets, and stronger hero photography. */
+.header { background:#A40000; border-bottom:1px solid #850000; }
+.brand { color:#FFFFFF; }
+.brand-icon { display:block; width:42px; height:42px; object-fit:contain; flex:0 0 auto; }
+.brand-wordmark { display:block; width:176px; height:48px; object-fit:contain; object-position:left center; }
+.navigation > a { color:#FFFFFF; }
+.navigation > a:hover { color:#F3DADA; }
+.navigation .nav-enquire { background:#FFFFFF; color:#A40000; }
+.navigation .nav-enquire:hover { background:#F3DADA; color:#A40000; }
+.mobile-menu { color:#FFFFFF; }
 .hero {
   background-color:#FFFFFF;
-  background-image:
-    linear-gradient(90deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,.08) 38%, rgba(255,255,255,0) 70%),
-    url("https://images.unsplash.com/photo-1758691737212-3eebbc8f84ed?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaGdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=85&w=2400");
+  background-image:url("https://horizons-cdn.hostinger.com/4eca9c3a-b40c-4dc7-a5fa-ba271def5534/foto-bdin3-Q0rm8.png");
   background-size:cover;
   background-position:center 48%;
   background-repeat:no-repeat;
-  color:#000000;
+  color:#FFFFFF;
+  position:relative;
+  isolation:isolate;
 }
-.hero-overline { color:#000000; }
-.hero-overline span, .aside-rule { background:#A40000; }
-.hero h1 em { color:#A40000; }
-.hero-summary, .quiet-link, .aside-copy, .aside-foot, .hero-base { color:#222222; }
-.hero-aside { border-left-color:rgba(0,0,0,.2); }
-.aside-heading { color:#000000; }
-.aside-index, .aside-foot svg { color:#A40000; }
-.hero-base { border-top-color:rgba(0,0,0,.18); }
-.hero-base a { color:#000000; }
+.hero::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(90deg,rgba(0,0,0,.68) 0%,rgba(0,0,0,.48) 47%,rgba(0,0,0,.12) 100%);
+}
+.hero-overline,.hero-summary,.quiet-link,.aside-copy,.aside-foot,.hero-base { color:#FFFFFF; }
+.hero h1,.aside-heading { color:#FFFFFF; }
+.hero h1 em { color:#FFFFFF; }
+.hero-overline span,.aside-rule { background:#FFFFFF; }
+.hero-aside { border-left-color:rgba(255,255,255,.5); }
+.aside-index,.aside-foot svg { color:#FFFFFF; }
+.hero-base { border-top-color:rgba(255,255,255,.4); }
+.hero-base a { color:#FFFFFF; }
+.hero .button-primary { background:#A40000; color:#FFFFFF; }
+.hero .button-primary:hover { background:#7D0000; }
 @media (max-width:680px) {
-  .brand-logo { width:165px; height:50px; }
-  .hero {
-    background-image:
-      linear-gradient(90deg, rgba(255,255,255,.15), rgba(255,255,255,.08)),
-      url("https://images.unsplash.com/photo-1758691737212-3eebbc8f84ed?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaGdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=85&w=1600");
-    background-position:center center;
-  }
+  .brand-icon { width:34px; height:34px; }
+  .brand-wordmark { width:145px; height:42px; }
+  .navigation { background:#A40000; }
+  .navigation > a { color:#FFFFFF; border-bottom-color:rgba(255,255,255,.22); }
+  .navigation .nav-enquire { background:#FFFFFF; color:#A40000; }
+  .hero { background-position:57% center; }
+  .hero::before { background:linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.38)); }
 }
