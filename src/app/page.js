@@ -30,8 +30,8 @@ function Brand({ inverse = false }) {
     <img className="brand-wordmark" src="/cropplogotext.jpeg" alt="CroppTech With Commerce" />
   </a>;
 }
-function Label({ n, children, light = false }) {
-  return <div className={"section-label" + (light ? " section-label-light" : "")}><span>{n}</span><i />{children}</div>;
+function Label({ children, light = false }) {
+  return <div className={"section-label" + (light ? " section-label-light" : "")}><i />{children}</div>;
 }
 
 export default function HomePage() {
@@ -55,34 +55,34 @@ export default function HomePage() {
           <p className="hero-summary">CroppTech brings commerce, business services and technology together to help people and organisations establish, operate and grow.</p>
           <div className="hero-links"><a className="button-primary" href="#businesses">Explore CroppTech <ArrowUpRight size={17} /></a><a className="quiet-link" href="#company">Our company <ArrowDown size={15} /></a></div>
         </div>
-        <aside className="hero-aside"><div className="aside-index">C / 01</div><div className="aside-rule" /><p className="aside-heading">A business group<br />for a connected world.</p><p className="aside-copy">Commercial thinking. Practical solutions. A wider view of what business can become.</p><div className="aside-foot"><Globe2 size={16} /><span>OPEN TO GLOBAL OPPORTUNITY</span></div></aside>
+        <aside className="hero-aside"><div className="aside-rule" /><p className="aside-heading">A business group<br />for a connected world.</p><p className="aside-copy">Commercial thinking. Practical solutions. A wider view of what business can become.</p><div className="aside-foot"><Globe2 size={16} /><span>OPEN TO GLOBAL OPPORTUNITY</span></div></aside>
       </div><div className="hero-base shell"><span>COMMERCE <b>·</b> BUSINESS <b>·</b> TECHNOLOGY</span><a href="#company">Discover the company <ArrowDown size={14} /></a></div></section>
 
       <section className="company-section" id="company"><div className="shell company-grid">
-        <div className="company-heading"><Label n="01">THE COMPANY</Label><h2>A broader view<br />of <em>business.</em></h2></div>
+        <div className="company-heading"><Label>THE COMPANY</Label><h2>A broader view<br />of <em>business.</em></h2></div>
         <div className="company-copy"><p className="company-lead">CroppTech With Commerce is a commerce-driven business and technology company with a focus on building, enabling and supporting business.</p><p>Our work spans our own commerce activities and services delivered to individuals and organisations. We bring together capabilities that help turn ideas into ventures, strengthen established businesses and create better ways to reach markets.</p><p>We see technology as an important advantage — but business remains the purpose behind everything we do.</p></div>
       </div></section>
 
       <section className="business-section" id="businesses"><div className="shell">
-        <div className="section-intro"><div><Label n="02">OUR BUSINESS AREAS</Label><h2>Four connected<br /><em>areas of focus.</em></h2></div><p>Our business is organised around complementary areas that can stand independently and work together when an opportunity calls for it.</p></div>
-        <div className="business-grid">{areas.map((item) => { const Icon = item.icon; return <article className="business-card" key={item.n}><div className="card-topline"><span>{item.n}</span><Icon size={22} strokeWidth={1.5} /></div><h3>{item.title}</h3><div className="card-subtitle">{item.sub}</div><p>{item.text}</p><a href="#capabilities" className="card-link">Explore capabilities <ArrowUpRight size={15} /></a></article>; })}</div>
+        <div className="section-intro"><div><Label>OUR BUSINESS AREAS</Label><h2>Four connected<br /><em>areas of focus.</em></h2></div><p>Our business is organised around complementary areas that can stand independently and work together when an opportunity calls for it.</p></div>
+        <div className="business-grid">{areas.map((item) => { const Icon = item.icon; return <article className="business-card" key={item.title}><div className="card-topline"><Icon size={22} strokeWidth={1.5} /></div><h3>{item.title}</h3><div className="card-subtitle">{item.sub}</div><p>{item.text}</p><a href="#capabilities" className="card-link">Explore capabilities <ArrowUpRight size={15} /></a></article>; })}</div>
       </div></section>
 
       <section className="capabilities-section" id="capabilities"><div className="shell capabilities-layout">
-        <div className="capabilities-intro"><Label n="03">OUR CAPABILITIES</Label><h2>Services shaped<br />around <em>real needs.</em></h2><p>From launching a new venture to improving an established operation, our services are designed to respond to practical business needs.</p><a href="#contact" className="outline-link">Discuss a requirement <ArrowUpRight size={16} /></a></div>
+        <div className="capabilities-intro"><Label>OUR CAPABILITIES</Label><h2>Services shaped<br />around <em>real needs.</em></h2><p>From launching a new venture to improving an established operation, our services are designed to respond to practical business needs.</p><a href="#contact" className="outline-link">Discuss a requirement <ArrowUpRight size={16} /></a></div>
         <div className="capability-list">
-          {areas.map((group) => <details className="capability-item" key={group.n}><summary><span className="capability-number">{group.n}</span><span className="capability-title">{group.title}</span><ChevronDown size={18} /></summary><div className="capability-content"><p>{group.text}</p><ul>{group.services.map((service) => <li key={service}>{service}</li>)}</ul></div></details>)}
-          {extended.map((group, i) => <details className="capability-item" key={group[0]}><summary><span className="capability-number">0{i + 5}</span><span className="capability-title">{group[0]}</span><ChevronDown size={18} /></summary><div className="capability-content"><p>{group[1]}</p></div></details>)}
+          {areas.map((group) => <details className="capability-item" key={group.n}><summary><span className="capability-title">{group.title}</span><ChevronDown size={18} /></summary><div className="capability-content"><p>{group.text}</p><ul>{group.services.map((service) => <li key={service}>{service}</li>)}</ul></div></details>)}
+          {extended.map((group, i) => <details className="capability-item" key={group[0]}><summary><span className="capability-title">{group[0]}</span><ChevronDown size={18} /></summary><div className="capability-content"><p>{group[1]}</p></div></details>)}
         </div>
       </div></section>
 
       <section className="perspective-section" id="perspective"><div className="shell perspective-layout">
-        <div className="perspective-title"><Label n="04" light>OUR PERSPECTIVE</Label><h2>Built on sound<br />business <em>principles.</em></h2></div>
-        <div className="principle-list">{principles.map(([title, description], i) => <article className="principle-row" key={title}><span>0{i + 1}</span><div><h3>{title}</h3><p>{description}</p></div></article>)}</div>
+        <div className="perspective-title"><Label light>OUR PERSPECTIVE</Label><h2>Built on sound<br />business <em>principles.</em></h2></div>
+        <div className="principle-list">{principles.map(([title, description], i) => <article className="principle-row" key={title}><div><h3>{title}</h3><p>{description}</p></div></article>)}</div>
       </div></section>
 
       <section className="contact-section" id="contact"><div className="shell contact-layout">
-        <div className="contact-heading"><Label n="05">CONTACT CROPPTECH</Label><h2>Let’s talk<br /><em>business.</em></h2></div>
+        <div className="contact-heading"><Label>CONTACT CROPPTECH</Label><h2>Let’s talk<br /><em>business.</em></h2></div>
         <div className="contact-content"><p className="contact-lead">Whether you are developing an idea, looking for business support or exploring a partnership, we welcome the conversation.</p><div className="contact-placeholder"><Building2 size={20} /><div><strong>Business enquiries</strong><span>Our official contact channels will be published here.</span></div></div><p className="contact-small">CroppTech With Commerce welcomes enquiries from individuals, businesses and potential partners.</p></div>
       </div></section>
 
