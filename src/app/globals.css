@@ -89,8 +89,8 @@ button { font:inherit; }
 .perspective-layout { display:grid; grid-template-columns:.9fr 1.1fr; gap:12%; }
 .section-label-light { color:#BDBDBD; }
 .perspective-title h2 { font-size:clamp(42px,5vw,61px); }
-.principle-list { border-top:1px solid #373737; }
-.principle-row { display:grid; grid-template-columns:35px 1fr; gap:18px; padding:25px 0; border-bottom:1px solid #373737; }
+.principle-list { display:flex; align-items:stretch; gap:30px; border-top:1px solid #373737; }
+.principle-row { display:flex; flex:1 1 0; min-width:0; align-items:flex-start; padding:25px 0; border-bottom:1px solid #373737; }
 .principle-row > span { color:var(--red); font-size:9px; padding-top:3px; }
 .principle-row h3 { font-size:15px; margin:0 0 8px; }
 .principle-row p { color:#A8A8A8; font-size:11px; line-height:1.8; max-width:430px; margin:0; }
@@ -142,6 +142,8 @@ button { font:inherit; }
   .hero-base a { font-size:8px; }
   .company-section,.business-section,.capabilities-section,.perspective-section,.contact-section { padding:76px 0; }
   .company-grid,.capabilities-layout,.perspective-layout,.contact-layout { grid-template-columns:1fr; gap:27px; }
+  .principle-list { flex-direction:column; gap:0; }
+  .principle-row { flex:1 1 auto; }
   .company-copy,.contact-content { padding-top:0; }
   .company-heading h2,.section-intro h2,.capabilities-intro h2,.perspective-title h2,.contact-heading h2 { font-size:46px; }
   .company-copy .company-lead,.contact-lead { font-size:17px; }
