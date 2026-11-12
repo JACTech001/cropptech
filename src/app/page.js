@@ -25,7 +25,10 @@ const principles = [
 const nav = [["Company", "#company"], ["Our businesses", "#businesses"], ["Capabilities", "#capabilities"], ["Perspective", "#perspective"], ["Contact", "#contact"]];
 
 function Brand({ inverse = false }) {
-  return <a className={"brand" + (inverse ? " brand-inverse" : "")} href="#top" aria-label="CroppTech With Commerce"><img className="brand-logo" src="https://i.postimg.cc/Kv593pHt/cropplogotext.jpg" alt="CroppTech With Commerce" /></a>;
+  return <a className={"brand" + (inverse ? " brand-inverse" : "")} href="#top" aria-label="CroppTech With Commerce">
+    <img className="brand-icon" src="/logo-icon.png" alt="" />
+    <img className="brand-wordmark" src="/logo-text.png" alt="CroppTech With Commerce" />
+  </a>;
 }
 function Label({ n, children, light = false }) {
   return <div className={"section-label" + (light ? " section-label-light" : "")}><span>{n}</span><i />{children}</div>;
