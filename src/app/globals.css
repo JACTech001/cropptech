@@ -269,3 +269,10 @@ button { font:inherit; }
   .brand-icon { width:42px; height:42px; flex-basis:42px; }
   .brand-wordmark { width:205px; height:58px; flex-basis:205px; }
 }
+
+
+/* Rounded wordmark image edges */
+.brand-wordmark {
+  border-radius: 14px;
+  overflow: hidden;
+}
