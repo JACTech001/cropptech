@@ -90,7 +90,7 @@ export default function HomePage() {
             <strong>Connect with CroppTech</strong>
             <div className="social-icons" aria-label="Social media platforms">
               <span className="social-icon" title="X" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.78 7.75L23.2 22h-6.25l-4.9-7.42L5.55 22H2.4l7.25-8.29L1.8 2h6.4l4.43 6.76L18.9 2Zm-1.1 18h1.73L7.28 3.9H5.42L17.8 20Z" fill="currentColor"/></svg></span>
-              <span className="social-icon" title="TikTok" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 7.1a6.9 6.9 0 0 1-4.2-1.4v8.1a6.1 6.1 0 1 1-6.1-6.1c.4 0 .8 0 1.2.1v3.4a2.8 2.8 0 1 0 1.8 2.6V2h3.3c.2 2.2 1.7 3.9 4 4.2v.9Z" fill="currentColor"/></svg></span>
+              <a className="social-icon" href="https://vm.tiktok.com/ZS9fHM2EYUXh8-ExnNQ/" target="_blank" rel="noopener noreferrer" title="TikTok" aria-label="CroppTech on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 7.1a6.9 6.9 0 0 1-4.2-1.4v8.1a6.1 6.1 0 1 1-6.1-6.1c.4 0 .8 0 1.2.1v3.4a2.8 2.8 0 1 0 1.8 2.6V2h3.3c.2 2.2 1.7 3.9 4 4.2v.9Z" fill="currentColor"/></svg></a>
               <span className="social-icon" title="Instagram" aria-label="Instagram"><Instagram size={21} strokeWidth={1.8} /></span>
               <span className="social-icon" title="Facebook" aria-label="Facebook"><Facebook size={21} strokeWidth={1.8} /></span>
               <span className="social-icon" title="LinkedIn" aria-label="LinkedIn"><Linkedin size={21} strokeWidth={1.8} /></span>
