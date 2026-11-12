@@ -54,7 +54,7 @@ button { font:inherit; }
 .company-copy { padding-top:35px; max-width:610px; }
 .company-copy p { color:var(--muted); font-size:13px; line-height:1.95; margin:0 0 18px; }
 .company-copy .company-lead { color:var(--black); font-size:20px; line-height:1.5; font-weight:700; letter-spacing:-.025em; margin-bottom:22px; }
-.business-section { padding:110px 0 120px; background:#F7F7F7; }
+.business-section { padding:110px 0 120px; background:#FFFFFF; }
 .section-intro { display:flex; justify-content:space-between; align-items:end; gap:40px; margin-bottom:54px; }
 .section-intro > p { max-width:360px; color:var(--muted); font-size:12px; line-height:1.9; margin:0 0 5px; }
 .business-grid { display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid #D8D8D8; border-left:1px solid #D8D8D8; }
