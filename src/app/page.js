@@ -244,7 +244,7 @@ export default function HomePage() {
             {serviceGroups.map((group) => {
               return (
                 <article className="service-card" id={group.id} key={group.id}>
-                  <div className="service-card-top"><Icon size={25} strokeWidth={1.5} /></div>
+                  
                   <div className="service-card-image"><img src={group.image} alt={group.imageAlt} loading="lazy" /></div>
                   <h3>{group.title}</h3>
                   <div className="service-subtitle">{group.subtitle}</div>
