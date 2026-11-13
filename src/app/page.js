@@ -280,7 +280,7 @@ export default function HomePage() {
           <div className="commerce-heading">
             <Label light>BEYOND TECHNOLOGY</Label>
             <h2>Commerce &<br /><em>business services.</em></h2>
-            <img className="commerce-brand-icon" src="/cropplogo.jpeg" alt="CroppTech logo icon" />
+            <img className="commerce-brand-wordmark" src="/cropplogotext.jpeg" alt="CroppTech" />
           </div>
           <div className="commerce-copy">
             <p className="commerce-lead">Creating opportunities beyond technology.</p>
