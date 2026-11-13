@@ -21,6 +21,8 @@ const nav = [
 const serviceGroups = [
   {
     id: "technology",
+    image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "A developer working with code on a laptop",
     number: "01",
     title: "Technology & Software Solutions",
     subtitle: "Designing and building useful digital products.",
@@ -41,6 +43,8 @@ const serviceGroups = [
   },
   {
     id: "ai",
+    image: "https://images.unsplash.com/photo-1758626099012-2904337e9c60?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "A laptop displaying an AI workspace",
     number: "02",
     title: "Artificial Intelligence & Automation",
     subtitle: "Making emerging technology practical.",
@@ -60,6 +64,8 @@ const serviceGroups = [
   },
   {
     id: "skills",
+    image: "https://images.unsplash.com/photo-1762784574847-16c5100cd1ff?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Professionals learning and planning together",
     number: "03",
     title: "Digital Skills & Technology Development",
     subtitle: "Helping people grow their digital capabilities.",
@@ -79,6 +85,8 @@ const serviceGroups = [
   },
   {
     id: "infrastructure",
+    image: "https://images.unsplash.com/photo-1603195827187-459ab02554a0?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Colleagues collaborating around a laptop",
     number: "04",
     title: "IT & Digital Infrastructure",
     subtitle: "Keeping technology reliable and useful.",
@@ -97,6 +105,8 @@ const serviceGroups = [
   },
   {
     id: "creative",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "A team working together around a laptop",
     number: "05",
     title: "Digital Media, Creative & Marketing",
     subtitle: "Building visibility and meaningful digital experiences.",
@@ -116,6 +126,8 @@ const serviceGroups = [
   },
   {
     id: "business",
+    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "A business team collaborating",
     number: "06",
     title: "Business & Digital Transformation",
     subtitle: "Helping organisations adapt and move forward.",
@@ -216,7 +228,7 @@ export default function HomePage() {
           </aside>
         </div>
         <div className="hero-base shell">
-          <span>TECHNOLOGY <b>·</b> AI <b>·</b> DIGITAL SKILLS <b>·</b> INNOVATION</span>
+          <span>TECHNOLOGY <b>·</b> AI <b>·</b> DIGITAL SKILLS <b>·</b> COMMERCE</span>
           <a href="#technology">Explore what we do <ArrowDown size={14} /></a>
         </div>
       </section>
@@ -247,6 +259,7 @@ export default function HomePage() {
               return (
                 <article className="service-card" id={group.id} key={group.id}>
                   <div className="service-card-top"><span>{group.number}</span><Icon size={25} strokeWidth={1.5} /></div>
+                  <div className="service-card-image"><img src={group.image} alt={group.imageAlt} loading="lazy" /></div>
                   <h3>{group.title}</h3>
                   <div className="service-subtitle">{group.subtitle}</div>
                   <p>{group.text}</p>
@@ -281,6 +294,8 @@ export default function HomePage() {
           <div><Label light>BEYOND TECHNOLOGY</Label><h2>Commerce &<br /><em>business services.</em></h2></div>
           <div className="commerce-copy">
             <p className="commerce-lead">Creating opportunities beyond technology.</p>
+            <p>Commerce is an important complementary part of CroppTech—connecting digital platforms, products, sourcing and trade—while technology remains our central focus.</p>
+            <div className="commerce-image"><img src="https://images.unsplash.com/photo-1769355104335-acef3aa4c9b6?auto=format&fit=crop&w=1200&q=85" alt="Warehouse packaging and products prepared for distribution" loading="lazy" /></div>
             <p>Alongside our core technology focus, CroppTech participates in commerce and complementary business activities that create value and expand opportunities.</p>
             <ul>
               <li>E-commerce solutions and online business development</li>
