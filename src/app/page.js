@@ -23,7 +23,6 @@ const serviceGroups = [
     id: "technology",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85",
     imageAlt: "Technology hardware and digital systems",
-    number: "01",
     title: "Technology & Software Solutions",
     subtitle: "Designing and building useful digital products.",
     text: "We design, develop and implement technology solutions that solve problems, improve productivity and create new opportunities.",
@@ -45,7 +44,6 @@ const serviceGroups = [
     id: "ai",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=85",
     imageAlt: "Artificial intelligence concept and digital innovation",
-    number: "02",
     title: "Artificial Intelligence & Automation",
     subtitle: "Making emerging technology practical.",
     text: "We help individuals and organisations understand, adopt and benefit from artificial intelligence and automation.",
@@ -66,7 +64,6 @@ const serviceGroups = [
     id: "skills",
     image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=85",
     imageAlt: "A technology training session",
-    number: "03",
     title: "Digital Skills & Technology Development",
     subtitle: "Helping people grow their digital capabilities.",
     text: "We support individuals, professionals and teams as they develop relevant digital and technological skills for work, business and personal growth.",
@@ -87,7 +84,6 @@ const serviceGroups = [
     id: "infrastructure",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=85",
     imageAlt: "Servers supporting digital infrastructure",
-    number: "04",
     title: "IT & Digital Infrastructure",
     subtitle: "Keeping technology reliable and useful.",
     text: "We provide technical support and infrastructure services that help individuals and organisations operate effectively.",
@@ -107,7 +103,6 @@ const serviceGroups = [
     id: "creative",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
     imageAlt: "Digital marketing analytics on a screen",
-    number: "05",
     title: "Digital Media, Creative & Marketing",
     subtitle: "Building visibility and meaningful digital experiences.",
     text: "We combine technology and creativity to help brands, businesses and individuals establish a strong digital presence.",
@@ -128,7 +123,6 @@ const serviceGroups = [
     id: "business",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=85",
     imageAlt: "A team collaborating on business strategy",
-    number: "06",
     title: "Business & Digital Transformation",
     subtitle: "Helping organisations adapt and move forward.",
     text: "We help businesses and organisations use technology to improve operations and respond to changing business environments.",
@@ -258,7 +252,7 @@ export default function HomePage() {
               const Icon = group.icon;
               return (
                 <article className="service-card" id={group.id} key={group.id}>
-                  <div className="service-card-top"><span>{group.number}</span><Icon size={25} strokeWidth={1.5} /></div>
+                  <div className="service-card-top"><Icon size={25} strokeWidth={1.5} /></div>
                   <div className="service-card-image"><img src={group.image} alt={group.imageAlt} loading="lazy" /></div>
                   <h3>{group.title}</h3>
                   <div className="service-subtitle">{group.subtitle}</div>
