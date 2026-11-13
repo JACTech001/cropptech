@@ -21,8 +21,8 @@ const nav = [
 const serviceGroups = [
   {
     id: "technology",
-    image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "A developer working with code on a laptop",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Technology hardware and digital systems",
     number: "01",
     title: "Technology & Software Solutions",
     subtitle: "Designing and building useful digital products.",
@@ -43,8 +43,8 @@ const serviceGroups = [
   },
   {
     id: "ai",
-    image: "https://images.unsplash.com/photo-1758626099012-2904337e9c60?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "A laptop displaying an AI workspace",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Artificial intelligence concept and digital innovation",
     number: "02",
     title: "Artificial Intelligence & Automation",
     subtitle: "Making emerging technology practical.",
@@ -64,8 +64,8 @@ const serviceGroups = [
   },
   {
     id: "skills",
-    image: "https://images.unsplash.com/photo-1762784574847-16c5100cd1ff?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "Professionals learning and planning together",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "A technology training session",
     number: "03",
     title: "Digital Skills & Technology Development",
     subtitle: "Helping people grow their digital capabilities.",
@@ -85,8 +85,8 @@ const serviceGroups = [
   },
   {
     id: "infrastructure",
-    image: "https://images.unsplash.com/photo-1603195827187-459ab02554a0?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "Colleagues collaborating around a laptop",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Servers supporting digital infrastructure",
     number: "04",
     title: "IT & Digital Infrastructure",
     subtitle: "Keeping technology reliable and useful.",
@@ -105,8 +105,8 @@ const serviceGroups = [
   },
   {
     id: "creative",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "A team working together around a laptop",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Digital marketing analytics on a screen",
     number: "05",
     title: "Digital Media, Creative & Marketing",
     subtitle: "Building visibility and meaningful digital experiences.",
@@ -126,8 +126,8 @@ const serviceGroups = [
   },
   {
     id: "business",
-    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "A business team collaborating",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "A team collaborating on business strategy",
     number: "06",
     title: "Business & Digital Transformation",
     subtitle: "Helping organisations adapt and move forward.",
@@ -295,7 +295,7 @@ export default function HomePage() {
           <div className="commerce-copy">
             <p className="commerce-lead">Creating opportunities beyond technology.</p>
             <p>Commerce is an important complementary part of CroppTech—connecting digital platforms, products, sourcing and trade—while technology remains our central focus.</p>
-            <div className="commerce-image"><img src="https://images.unsplash.com/photo-1769355104335-acef3aa4c9b6?auto=format&fit=crop&w=1200&q=85" alt="Warehouse packaging and products prepared for distribution" loading="lazy" /></div>
+            <div className="commerce-image"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=85" alt="Warehouse shelves and packages prepared for distribution" loading="lazy" /></div>
             <p>Alongside our core technology focus, CroppTech participates in commerce and complementary business activities that create value and expand opportunities.</p>
             <ul>
               <li>E-commerce solutions and online business development</li>
