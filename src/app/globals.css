@@ -108,6 +108,10 @@ button { font:inherit; }
 .footer-main { display:flex; justify-content:space-between; align-items:center; padding-bottom:43px; }
 .brand-inverse { color:var(--white); }
 .footer-brand > p { color:#999; font-size:9px; margin:12px 0 0 53px; }
+.footer-socials { display:flex; flex-wrap:wrap; gap:14px; margin:17px 0 0 53px; }
+.footer-socials a { display:inline-flex; align-items:center; gap:5px; color:#B9B9B9; font-size:10px; transition:color .2s ease; }
+.footer-socials a:hover { color:var(--white); }
+.footer-socials svg { color:var(--red); }
 .footer-links { display:flex; gap:23px; }
 .footer-links a,.footer-top-link { color:#B9B9B9; font-size:9px; }
 .footer-links a:hover,.footer-top-link:hover { color:var(--white); }
