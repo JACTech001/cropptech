@@ -343,6 +343,7 @@ export default function HomePage() {
             <Brand inverse />
             <p>Technology. Skills. Innovation.</p>
             <div className="footer-socials" aria-label="CroppTech social media">
+              <a href="https://x.com/JACTech001" target="_blank" rel="noopener noreferrer">X <ArrowUpRight size={14} /></a>
               <a href="https://vm.tiktok.com/ZS9fHM2EYUXh8-ExnNQ/" target="_blank" rel="noopener noreferrer">TikTok <ArrowUpRight size={14} /></a>
             </div>
           </div>
