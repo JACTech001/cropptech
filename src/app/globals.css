@@ -628,18 +628,17 @@ button { font:inherit; }
   letter-spacing: -.065em;
 }
 .commerce-section h2 em { color: #000000; font-style: normal; }
-.commerce-brand-icon {
+.commerce-brand-wordmark {
   display: block;
-  width: 150px;
-  height: 150px;
+  width: min(100%, 290px);
+  height: auto;
   object-fit: contain;
   object-position: left center;
   margin-top: 34px;
 }
 @media (max-width: 680px) {
-  .commerce-brand-icon {
-    width: 124px;
-    height: 124px;
+  .commerce-brand-wordmark {
+    width: min(100%, 250px);
     margin-top: 26px;
   }
 }
