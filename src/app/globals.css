@@ -628,6 +628,21 @@ button { font:inherit; }
   letter-spacing: -.065em;
 }
 .commerce-section h2 em { color: #000000; font-style: normal; }
+.commerce-brand-icon {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  object-position: left center;
+  margin-top: 34px;
+}
+@media (max-width: 680px) {
+  .commerce-brand-icon {
+    width: 124px;
+    height: 124px;
+    margin-top: 26px;
+  }
+}
 .commerce-copy { max-width: 590px; padding-top: 28px; }
 .commerce-copy p {
   color: #F8EAEA;
