@@ -339,7 +339,13 @@ export default function HomePage() {
 
       <footer className="footer">
         <div className="shell footer-main">
-          <div className="footer-brand"><Brand inverse /><p>Technology. Skills. Innovation.</p></div>
+          <div className="footer-brand">
+            <Brand inverse />
+            <p>Technology. Skills. Innovation.</p>
+            <div className="footer-socials" aria-label="CroppTech social media">
+              <a href="https://vm.tiktok.com/ZS9fHM2EYUXh8-ExnNQ/" target="_blank" rel="noopener noreferrer">TikTok <ArrowUpRight size={14} /></a>
+            </div>
+          </div>
           <div className="footer-links">{nav.map(([label, href]) => <a key={label} href={href}>{label}</a>)}</div>
           <a className="footer-top-link" href="#top">Back to top <ArrowUpRight size={15} /></a>
         </div>
