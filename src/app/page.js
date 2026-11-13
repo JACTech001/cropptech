@@ -64,7 +64,6 @@ const serviceGroups = [
     title: "Digital Skills & Technology Development",
     subtitle: "Helping people grow their digital capabilities.",
     text: "We support individuals, professionals and teams as they develop relevant digital and technological skills for work, business and personal growth.",
-    icon: GraduationCap,
     services: [
       "Digital skills training",
       "Technology education and mentorship",
@@ -243,7 +242,6 @@ export default function HomePage() {
           </div>
           <div className="service-grid">
             {serviceGroups.map((group) => {
-              const Icon = group.icon;
               return (
                 <article className="service-card" id={group.id} key={group.id}>
                   <div className="service-card-top"><Icon size={25} strokeWidth={1.5} /></div>
