@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
-const nav = [["Home", "/"], ["About", "/learn-more"], ["Learn More", "/learn-more"], ["Contact", "/contact"]];
+const nav = [["Home", "/"], ["Learn More", "/learn-more"], ["Contact", "/contact"]];
 
 function Brand() {
   return <a className="brand" href="/" aria-label="CroppTech home"><img className="brand-icon" src="/cropplogo.jpeg" alt="" /><span className="brand-wordmark-window"><img className="brand-wordmark" src="/cropplogotext.jpeg" alt="CroppTech" /></span></a>;
