@@ -81,7 +81,7 @@ export default function LearnMorePage() {
             <div className="work-showcase-copy"><span className="work-type">RETAIL &amp; COMMERCE · SAMPLE PROFILE</span><h3>Northstar Retail</h3><p>An illustrative retail business that could benefit from an online storefront, product presentation and a smoother customer enquiry process.</p><a href="https://www.shopify.com/" target="_blank" rel="noreferrer">Visit reference website <ArrowUpRight size={15} /></a></div>
           </article>
           <article className="work-showcase-card">
-            <img src="https://images.unsplash.com/photo-1524172190349-7b2f6f986b9b?auto=format&fit=crop&w=1000&q=85" alt="People taking part in a learning session" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85" alt="People taking part in a learning session" loading="lazy" />
             <div className="work-showcase-copy"><span className="work-type">EDUCATION · SAMPLE PROFILE</span><h3>Vertex Learning Hub</h3><p>An illustrative learning organisation that could use a professional website, digital learning resources and skills development support.</p><a href="https://www.coursera.org/" target="_blank" rel="noreferrer">Visit reference website <ArrowUpRight size={15} /></a></div>
           </article>
           <article className="work-showcase-card">
