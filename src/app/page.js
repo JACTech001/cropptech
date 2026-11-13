@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import {
-  ArrowDown, ArrowUpRight, Menu, X, Code2, BrainCircuit,
-  GraduationCap, ServerCog, Palette, Workflow, ShoppingBag,
+  ArrowDown, ArrowUpRight, Menu, X, Code2, GraduationCap,
   Users, Building2, BriefcaseBusiness, Mail, Phone, ChevronDown
 } from "lucide-react";
 
@@ -26,7 +25,6 @@ const serviceGroups = [
     title: "Technology & Software Solutions",
     subtitle: "Designing and building useful digital products.",
     text: "We design, develop and implement technology solutions that solve problems, improve productivity and create new opportunities.",
-    icon: Code2,
     services: [
       "Website design and development",
       "Web application development",
@@ -47,7 +45,6 @@ const serviceGroups = [
     title: "Artificial Intelligence & Automation",
     subtitle: "Making emerging technology practical.",
     text: "We help individuals and organisations understand, adopt and benefit from artificial intelligence and automation.",
-    icon: BrainCircuit,
     services: [
       "AI integration and implementation",
       "AI-powered business solutions",
@@ -87,7 +84,6 @@ const serviceGroups = [
     title: "IT & Digital Infrastructure",
     subtitle: "Keeping technology reliable and useful.",
     text: "We provide technical support and infrastructure services that help individuals and organisations operate effectively.",
-    icon: ServerCog,
     services: [
       "IT support and maintenance",
       "Computer and network solutions",
@@ -106,7 +102,6 @@ const serviceGroups = [
     title: "Digital Media, Creative & Marketing",
     subtitle: "Building visibility and meaningful digital experiences.",
     text: "We combine technology and creativity to help brands, businesses and individuals establish a strong digital presence.",
-    icon: Palette,
     services: [
       "Graphic and brand design",
       "Website and digital experience design",
@@ -126,7 +121,6 @@ const serviceGroups = [
     title: "Business & Digital Transformation",
     subtitle: "Helping organisations adapt and move forward.",
     text: "We help businesses and organisations use technology to improve operations and respond to changing business environments.",
-    icon: Workflow,
     services: [
       "Digital transformation consulting",
       "Business technology advisory",
@@ -305,7 +299,7 @@ export default function HomePage() {
         <div className="shell perspective-layout">
           <div className="perspective-title"><Label light>WHY CROPPTECH</Label><h2>More than technology.<br /><em>A partner in progress.</em></h2></div>
           <div className="strength-grid">
-            {strengths.map(([title, text], index) => <article className="strength-card" key={title}><span>0{index + 1}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}
+            {strengths.map(([title, text], index) => <article className="strength-card" key={title}><div><h3>{title}</h3><p>{text}</p></div></article>)}
           </div>
         </div>
       </section>
