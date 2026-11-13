@@ -10,7 +10,7 @@ export default function ContactPage() {
   const [message,setMessage]=useState("");
   function submit(event) {
     event.preventDefault();
-    const body = "Name: " + name + "\\nEmail: " + email + "\\n\\n" + message;
+    const body = "Name: " + name + "\nEmail: " + email + "\n\n" + message;
     const url = "mailto:info@cropptech.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     window.location.href = url;
   }
