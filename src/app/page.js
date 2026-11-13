@@ -10,7 +10,7 @@ import {
 const nav = [
   ["Home", "#top"],
   ["About", "#about"],
-  ["Technology Services", "#technology"],
+  ["Technology Services", "#services"],
   ["AI & Automation", "#ai"],
   ["Digital Skills", "#skills"],
   ["Business Solutions", "#business"],
@@ -224,7 +224,7 @@ export default function HomePage() {
       <section className="company-section" id="about">
         <div className="shell company-grid">
           <div className="company-heading">
-            <Label>ABOUT CROP PTECH</Label>
+            <Label>ABOUT CROPPTECH</Label>
             <h2>Technology that<br />creates <em>possibilities.</em></h2>
           </div>
           <div className="company-copy">
@@ -235,7 +235,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="business-section technology-section" id="technology">
+      <section className="business-section technology-section" id="services">
         <div className="shell">
           <div className="section-intro">
             <div><Label>WHAT WE DO</Label><h2>Technology is our foundation.<br /><em>Solutions are our business.</em></h2></div>
@@ -294,7 +294,7 @@ export default function HomePage() {
 
       <section className="perspective-section why-section" id="why-cropptech">
         <div className="shell perspective-layout">
-          <div className="perspective-title"><Label light>WHY CROP PTECH</Label><h2>More than technology.<br /><em>A partner in progress.</em></h2></div>
+          <div className="perspective-title"><Label light>WHY CROPPTECH</Label><h2>More than technology.<br /><em>A partner in progress.</em></h2></div>
           <div className="strength-grid">
             {strengths.map(([title, text], index) => <article className="strength-card" key={title}><span>0{index + 1}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}
           </div>
