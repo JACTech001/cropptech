@@ -279,7 +279,11 @@ export default function HomePage() {
 
       <section className="commerce-section" id="commerce">
         <div className="shell commerce-layout">
-          <div><Label light>BEYOND TECHNOLOGY</Label><h2>Commerce &<br /><em>business services.</em></h2></div>
+          <div className="commerce-heading">
+            <Label light>BEYOND TECHNOLOGY</Label>
+            <h2>Commerce &<br /><em>business services.</em></h2>
+            <img className="commerce-brand-icon" src="/cropplogo.jpeg" alt="CroppTech logo icon" />
+          </div>
           <div className="commerce-copy">
             <p className="commerce-lead">Creating opportunities beyond technology.</p>
             <p>Commerce is an important complementary part of CroppTech—connecting digital platforms, products, sourcing and trade—while technology remains our central focus.</p>
