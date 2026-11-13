@@ -1,37 +1,180 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowDown, ArrowRight, ArrowUpRight, Menu, X, Building2, ShoppingCart, MonitorCog, Megaphone, BriefcaseBusiness, Globe2, ChevronDown, Instagram, Facebook, Linkedin, Mail, Phone } from "lucide-react";
+import {
+  ArrowDown, ArrowUpRight, Menu, X, Code2, BrainCircuit,
+  GraduationCap, ServerCog, Palette, Workflow, ShoppingBag,
+  Users, Building2, BriefcaseBusiness, Mail, Phone, ChevronDown
+} from "lucide-react";
 
-const areas = [
-  { title: "Commerce", sub: "Trade, products & market access", image: "https://images.unsplash.com/photo-1769355104335-acef3aa4c9b6?auto=format&fit=crop&w=1400&q=85", imageAlt: "Cardboard packages and goods arranged in a warehouse", text: "We build and operate commerce initiatives that bring products, customers and opportunities together across digital and physical channels.", icon: ShoppingCart, services: ["E-commerce business setup", "Online store development", "Product and sales management", "Procurement and supplier coordination", "B2B and B2C commerce"] },
-  { title: "Business solutions", sub: "From first idea to sustained growth", image: "https://images.pexels.com/photos/30689114/pexels-photo-30689114.jpeg?auto=compress&cs=tinysrgb&w=1400", imageAlt: "African business professionals collaborating around a laptop", text: "We help individuals establish new ventures and support existing organisations with the structure, planning and operational capability to move forward.", icon: BriefcaseBusiness, services: ["Business startup assistance", "Business planning and strategy", "Operations and process improvement", "Market research and analysis", "Project and growth support"] },
-  { title: "Technology", sub: "Digital capability with a purpose", image: "https://images.unsplash.com/photo-1771922748624-b205cf5d002d?auto=format&fit=crop&w=1400&q=85", imageAlt: "Laptop and phone displaying business data and a digital dashboard", text: "We apply practical technology to solve business problems, improve customer experiences and make everyday operations more effective.", icon: MonitorCog, services: ["Website and web application development", "Software and API development", "UI/UX and digital experience design", "IT support and maintenance", "Cybersecurity and database services"] },
-  { title: "Advertising & marketing", sub: "Positioning, visibility & connection", image: "https://images.unsplash.com/photo-1651684195895-38708dc94cfa?auto=format&fit=crop&w=1400&q=85", imageAlt: "Two colleagues working together on a marketing strategy at a laptop", text: "We help organisations communicate their value, strengthen their presence and connect with the audiences that matter to them.", icon: Megaphone, services: ["Brand identity and creative design", "Digital marketing strategy", "Advertising and campaign management", "Social media management", "Content and brand promotion"] }
+const nav = [
+  ["Home", "#top"],
+  ["About", "#about"],
+  ["Technology Services", "#technology"],
+  ["AI & Automation", "#ai"],
+  ["Digital Skills", "#skills"],
+  ["Business Solutions", "#business"],
+  ["Commerce", "#commerce"],
+  ["Contact", "#contact"]
 ];
 
-const extended = [
-  ["Creative, branding & design", "Graphic design, logo design, corporate branding, brand identity, print design, video editing, motion graphics and creative content."],
-  ["Social media & digital marketing", "Social media strategy, account management, content creation, paid campaigns, community management, analytics, SEO, email and content marketing."],
-  ["Business operations & administration", "Business process management, operational planning, workflow coordination, administrative support, documentation and organisational development."],
-  ["Customer & client relations", "Customer support, client onboarding, relationship management, complaint handling, feedback, after-sales support and customer retention."],
-  ["Finance, people & talent support", "Bookkeeping, financial records, reporting, budget planning, payroll coordination, recruitment, onboarding, training and performance support."]
+const serviceGroups = [
+  {
+    id: "technology",
+    number: "01",
+    title: "Technology & Software Solutions",
+    subtitle: "Designing and building useful digital products.",
+    text: "We design, develop and implement technology solutions that solve problems, improve productivity and create new opportunities.",
+    icon: Code2,
+    services: [
+      "Website design and development",
+      "Web application development",
+      "Mobile application development",
+      "Custom software development",
+      "UI/UX design",
+      "Database design and management",
+      "API development and integration",
+      "IT consulting and technical support",
+      "Systems integration and maintenance",
+      "Cloud and digital infrastructure solutions"
+    ]
+  },
+  {
+    id: "ai",
+    number: "02",
+    title: "Artificial Intelligence & Automation",
+    subtitle: "Making emerging technology practical.",
+    text: "We help individuals and organisations understand, adopt and benefit from artificial intelligence and automation.",
+    icon: BrainCircuit,
+    services: [
+      "AI integration and implementation",
+      "AI-powered business solutions",
+      "AI tools consultation and deployment",
+      "Workflow and business process automation",
+      "AI chatbot development",
+      "Intelligent digital assistants",
+      "AI-assisted content and productivity solutions",
+      "AI training and adoption support",
+      "Technology innovation and research"
+    ]
+  },
+  {
+    id: "skills",
+    number: "03",
+    title: "Digital Skills & Technology Development",
+    subtitle: "Helping people grow their digital capabilities.",
+    text: "We support individuals, professionals and teams as they develop relevant digital and technological skills for work, business and personal growth.",
+    icon: GraduationCap,
+    services: [
+      "Digital skills training",
+      "Technology education and mentorship",
+      "Web development training",
+      "Software and programming skills",
+      "Artificial intelligence education",
+      "Data analysis and digital literacy",
+      "UI/UX and graphic design skills",
+      "Digital productivity training",
+      "Professional and corporate tech training"
+    ]
+  },
+  {
+    id: "infrastructure",
+    number: "04",
+    title: "IT & Digital Infrastructure",
+    subtitle: "Keeping technology reliable and useful.",
+    text: "We provide technical support and infrastructure services that help individuals and organisations operate effectively.",
+    icon: ServerCog,
+    services: [
+      "IT support and maintenance",
+      "Computer and network solutions",
+      "Technical troubleshooting",
+      "Cybersecurity solutions",
+      "Data management and backup",
+      "Cloud services",
+      "System installation and configuration",
+      "IT infrastructure consultation"
+    ]
+  },
+  {
+    id: "creative",
+    number: "05",
+    title: "Digital Media, Creative & Marketing",
+    subtitle: "Building visibility and meaningful digital experiences.",
+    text: "We combine technology and creativity to help brands, businesses and individuals establish a strong digital presence.",
+    icon: Palette,
+    services: [
+      "Graphic and brand design",
+      "Website and digital experience design",
+      "Branding and visual identity",
+      "Social media management",
+      "Digital marketing",
+      "Content development",
+      "Video editing and creative production",
+      "Search engine optimisation",
+      "Digital advertising and campaign management"
+    ]
+  },
+  {
+    id: "business",
+    number: "06",
+    title: "Business & Digital Transformation",
+    subtitle: "Helping organisations adapt and move forward.",
+    text: "We help businesses and organisations use technology to improve operations and respond to changing business environments.",
+    icon: Workflow,
+    services: [
+      "Digital transformation consulting",
+      "Business technology advisory",
+      "Business process optimisation",
+      "Digital business development",
+      "Technology project management",
+      "Business automation",
+      "Digital strategy and planning",
+      "Organisational technology support"
+    ]
+  }
 ];
-const principles = [
-  ["Commercial perspective", "We begin with the business objective, the customer and the opportunity — then shape the right response."],
-  ["Connected capabilities", "Commerce, business services, technology and marketing work together as complementary capabilities."],
-  ["Long-term relationships", "We value clarity, accountability and partnerships built around meaningful, lasting progress."]
+
+const audiences = [
+  {
+    title: "Individuals",
+    text: "Build valuable technology skills, develop professionally, solve technical problems and explore opportunities in the digital economy.",
+    icon: Users
+  },
+  {
+    title: "Startups & entrepreneurs",
+    text: "Build digital products, establish an online presence and use technology to develop and grow a venture.",
+    icon: BriefcaseBusiness
+  },
+  {
+    title: "Businesses & companies",
+    text: "Access software development, IT services, AI integration, automation, digital marketing and business technology solutions.",
+    icon: Building2
+  },
+  {
+    title: "Organisations & institutions",
+    text: "Explore technology consulting, digital transformation, capacity development, infrastructure and technical support.",
+    icon: GraduationCap
+  }
 ];
-const nav = [["Company", "#company"], ["Our businesses", "#businesses"], ["Capabilities", "#capabilities"], ["Perspective", "#perspective"], ["Contact", "#contact"]];
+
+const strengths = [
+  ["Broad technical perspective", "We bring together software, IT, AI, digital skills and creative capabilities under one technology-led company."],
+  ["Innovation with purpose", "We look for practical ways emerging technologies can solve real problems and create useful opportunities."],
+  ["People-centred development", "We believe technology creates more value when people have the knowledge and confidence to use it."],
+  ["Solutions shaped around needs", "We recognise that individuals, startups, companies and institutions have different goals and requirements."]
+];
 
 function Brand({ inverse = false }) {
-  return <a className={"brand" + (inverse ? " brand-inverse" : "")} href="#top" aria-label="CroppTech With Commerce">
-    <img className="brand-icon" src="/cropplogo.jpeg" alt="" />
-    <span className="brand-wordmark-window">
-      <img className="brand-wordmark" src="/cropplogotext.jpeg" alt="CroppTech With Commerce" />
-    </span>
-  </a>;
+  return (
+    <a className={"brand" + (inverse ? " brand-inverse" : "")} href="#top" aria-label="CroppTech">
+      <img className="brand-icon" src="/cropplogo.jpeg" alt="" />
+      <span className="brand-wordmark-window">
+        <img className="brand-wordmark" src="/cropplogotext.jpeg" alt="CroppTech" />
+      </span>
+    </a>
+  );
 }
+
 function Label({ children, light = false }) {
   return <div className={"section-label" + (light ? " section-label-light" : "")}>{children}</div>;
 }
@@ -39,70 +182,154 @@ function Label({ children, light = false }) {
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const close = () => setMenuOpen(false);
+
   return (
     <main id="top">
-      <header className="header" onKeyDown={(event) => { if (event.key === "Escape") close(); }}><div className="shell header-inner">
-        <Brand />
-        <button className="mobile-menu" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen} aria-controls="primary-navigation">{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>
-        <nav id="primary-navigation" className={"navigation" + (menuOpen ? " navigation-open" : "")} aria-label="Main navigation">
-          {nav.map(([label, href]) => <a key={label} href={href} onClick={close}>{label}</a>)}
-          <a className="nav-enquire" href="#contact" onClick={close}>Enquire <ArrowUpRight size={15} /></a>
-        </nav>
-      </div></header>
-
-      <section className="hero"><div className="shell hero-layout">
-        <div className="hero-main">
-          <div className="hero-overline">A COMMERCE-LED BUSINESS GROUP</div>
-          <h1>Building business.<br /><em>Creating</em> opportunity.</h1>
-          <p className="hero-summary">CroppTech brings commerce, business services and technology together to help people and organisations establish, operate and grow.</p>
-          <div className="hero-links"><a className="button-primary" href="#businesses">Explore CroppTech <ArrowUpRight size={17} /></a><a className="quiet-link" href="#company">Our company <ArrowDown size={15} /></a></div>
+      <header className="header" onKeyDown={(event) => { if (event.key === "Escape") close(); }}>
+        <div className="shell header-inner">
+          <Brand />
+          <button className="mobile-menu" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen} aria-controls="primary-navigation">
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+          <nav id="primary-navigation" className={"navigation" + (menuOpen ? " navigation-open" : "")} aria-label="Main navigation">
+            {nav.map(([label, href]) => <a key={label} href={href} onClick={close}>{label}</a>)}
+            <a className="nav-enquire" href="#contact" onClick={close}>Let’s talk <ArrowUpRight size={15} /></a>
+          </nav>
         </div>
-        <aside className="hero-aside"><p className="aside-heading">A business group<br />for a connected world.</p><p className="aside-copy">Commercial thinking. Practical solutions. A wider view of what business can become.</p><div className="aside-foot"><Globe2 size={16} /><span>OPEN TO GLOBAL OPPORTUNITY</span></div></aside>
-      </div><div className="hero-base shell"><span>COMMERCE <b>·</b> BUSINESS <b>·</b> TECHNOLOGY</span><a href="#company">Discover the company <ArrowDown size={14} /></a></div></section>
+      </header>
 
-      <section className="company-section" id="company"><div className="shell company-grid">
-        <div className="company-heading"><Label>THE COMPANY</Label><h2>A broader view<br />of <em>business.</em></h2></div>
-        <div className="company-copy"><p className="company-lead">CroppTech With Commerce is a commerce-driven business and technology company with a focus on building, enabling and supporting business.</p><p>Our work spans our own commerce activities and services delivered to individuals and organisations. We bring together capabilities that help turn ideas into ventures, strengthen established businesses and create better ways to reach markets.</p><p>We see technology as an important advantage — but business remains the purpose behind everything we do.</p></div>
-      </div></section>
-
-      <section className="business-section" id="businesses"><div className="shell">
-        <div className="section-intro"><div><Label>OUR BUSINESS AREAS</Label><h2>Four connected<br /><em>areas of focus.</em></h2></div><p>Our business is organised around complementary areas that can stand independently and work together when an opportunity calls for it.</p></div>
-        <div className="business-grid">{areas.map((item) => { const Icon = item.icon; return <article className="business-card" key={item.title}><div className="business-card-image"><img src={item.image} alt={item.imageAlt} loading="lazy" /></div><div className="card-topline"><Icon size={22} strokeWidth={1.5} /></div><h3>{item.title}</h3><div className="card-subtitle">{item.sub}</div><p>{item.text}</p><a href="#capabilities" className="card-link">Explore capabilities <ArrowUpRight size={15} /></a></article>; })}</div>
-      </div></section>
-
-      <section className="capabilities-section" id="capabilities"><div className="shell capabilities-layout">
-        <div className="capabilities-intro"><Label>OUR CAPABILITIES</Label><h2>Services shaped<br />around <em>real needs.</em></h2><p>From launching a new venture to improving an established operation, our services are designed to respond to practical business needs.</p><a href="#contact" className="outline-link">Discuss a requirement <ArrowUpRight size={16} /></a></div>
-        <div className="capability-list">
-          {areas.map((group) => <details className="capability-item" key={group.title}><summary><span className="capability-title">{group.title}</span><ChevronDown size={18} /></summary><div className="capability-content"><p>{group.text}</p><ul>{group.services.map((service) => <li key={service}>{service}</li>)}</ul></div></details>)}
-          {extended.map((group, i) => <details className="capability-item" key={group[0]}><summary><span className="capability-title">{group[0]}</span><ChevronDown size={18} /></summary><div className="capability-content"><p>{group[1]}</p></div></details>)}
-        </div>
-      </div></section>
-
-      <section className="perspective-section" id="perspective"><div className="shell perspective-layout">
-        <div className="perspective-title"><Label light>OUR PERSPECTIVE</Label><h2>Built on sound<br />business <em>principles.</em></h2></div>
-        <div className="principle-list">{principles.map(([title, description], i) => <article className="principle-row" key={title}><div><h3>{title}</h3><p>{description}</p></div></article>)}</div>
-      </div></section>
-
-      <section className="contact-section" id="contact"><div className="shell contact-layout">
-        <div className="contact-heading"><Label>CONTACT CROPPTECH</Label><h2>Let’s talk<br /><em>business.</em></h2></div>
-        <div className="contact-content"><p className="contact-lead">Whether you are developing an idea, looking for business support or exploring a partnership, we welcome the conversation.</p><div className="contact-methods">
-            <a className="contact-method" href="mailto:info@cropptech.com"><Mail size={20} /><span><strong>Email</strong><small>info@cropptech.com</small></span></a>
-            <div className="contact-method contact-method-pending"><Phone size={20} /><span><strong>Phone</strong><small>Coming soon</small></span></div>
-          </div>
-          <div className="social-contact">
-            <strong>Connect with CroppTech</strong>
-            <div className="social-icons" aria-label="Social media platforms">
-              <span className="social-icon" title="X" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.78 7.75L23.2 22h-6.25l-4.9-7.42L5.55 22H2.4l7.25-8.29L1.8 2h6.4l4.43 6.76L18.9 2Zm-1.1 18h1.73L7.28 3.9H5.42L17.8 20Z" fill="currentColor"/></svg></span>
-              <a className="social-icon" href="https://vm.tiktok.com/ZS9fHM2EYUXh8-ExnNQ/" target="_blank" rel="noopener noreferrer" title="TikTok" aria-label="CroppTech on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 7.1a6.9 6.9 0 0 1-4.2-1.4v8.1a6.1 6.1 0 1 1-6.1-6.1c.4 0 .8 0 1.2.1v3.4a2.8 2.8 0 1 0 1.8 2.6V2h3.3c.2 2.2 1.7 3.9 4 4.2v.9Z" fill="currentColor"/></svg></a>
-              <span className="social-icon" title="Instagram" aria-label="Instagram"><Instagram size={21} strokeWidth={1.8} /></span>
-              <span className="social-icon" title="Facebook" aria-label="Facebook"><Facebook size={21} strokeWidth={1.8} /></span>
-              <span className="social-icon" title="LinkedIn" aria-label="LinkedIn"><Linkedin size={21} strokeWidth={1.8} /></span>
+      <section className="hero tech-hero">
+        <div className="shell hero-layout">
+          <div className="hero-main">
+            <div className="hero-overline">TECHNOLOGY. SKILLS. INNOVATION.</div>
+            <h1>Empowering people.<br /><em>Transforming</em> businesses.</h1>
+            <p className="hero-summary">Building with technology. CroppTech helps individuals, businesses and organisations develop digital capabilities, embrace innovation and achieve more through technology and AI.</p>
+            <div className="hero-links">
+              <a className="button-primary" href="#technology">Explore our services <ArrowUpRight size={17} /></a>
+              <a className="quiet-link" href="#about">Discover CroppTech <ArrowDown size={15} /></a>
             </div>
-            <span className="social-note">Social profile links will be connected once the official accounts are confirmed.</span>
-          </div><p className="contact-small">CroppTech With Commerce welcomes enquiries from individuals, businesses and potential partners.</p></div>
-      </div></section>
+          </div>
+          <aside className="hero-aside">
+            <p className="aside-heading">Technology that creates possibilities.</p>
+            <p className="aside-copy">Practical expertise. Digital skills. Innovative solutions for a changing world.</p>
+            <div className="aside-foot"><Code2 size={16} /><span>BUILT AROUND TECHNOLOGY</span></div>
+          </aside>
+        </div>
+        <div className="hero-base shell">
+          <span>TECHNOLOGY <b>·</b> AI <b>·</b> DIGITAL SKILLS <b>·</b> INNOVATION</span>
+          <a href="#technology">Explore what we do <ArrowDown size={14} /></a>
+        </div>
+      </section>
 
-      <footer className="footer"><div className="shell footer-main"><div className="footer-brand"><Brand inverse /><p>A commerce-led business group.</p></div><div className="footer-links">{nav.map(([label, href]) => <a key={label} href={href}>{label}</a>)}</div><a className="footer-top-link" href="#top">Back to top <ArrowUpRight size={15} /></a></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} CroppTech With Commerce. All rights reserved.</span><span>Commerce · Business · Technology</span></div></footer>
+      <section className="company-section" id="about">
+        <div className="shell company-grid">
+          <div className="company-heading">
+            <Label>ABOUT CROP PTECH</Label>
+            <h2>Technology that<br />creates <em>possibilities.</em></h2>
+          </div>
+          <div className="company-copy">
+            <p className="company-lead">CroppTech is a technology and digital solutions company providing professional tech services, digital skills, software solutions and AI-powered innovations.</p>
+            <p>We exist to bridge the gap between people, businesses and the ever-evolving world of technology. Whether you are developing valuable tech skills, building a digital presence, seeking a technological solution or improving organisational operations, CroppTech aims to provide the expertise and support to help you move forward.</p>
+            <p>Our approach combines technical knowledge, creativity, innovation and practical problem-solving. We are committed to helping individuals develop, businesses transform and organisations become more effective through technology.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="business-section technology-section" id="technology">
+        <div className="shell">
+          <div className="section-intro">
+            <div><Label>WHAT WE DO</Label><h2>Technology is our foundation.<br /><em>Solutions are our business.</em></h2></div>
+            <p>From digital products and AI adoption to skills development and IT infrastructure, our services respond to the changing needs of people and organisations.</p>
+          </div>
+          <div className="service-grid">
+            {serviceGroups.map((group) => {
+              const Icon = group.icon;
+              return (
+                <article className="service-card" id={group.id} key={group.id}>
+                  <div className="service-card-top"><span>{group.number}</span><Icon size={25} strokeWidth={1.5} /></div>
+                  <h3>{group.title}</h3>
+                  <div className="service-subtitle">{group.subtitle}</div>
+                  <p>{group.text}</p>
+                  <details className="service-details">
+                    <summary>Explore services <ChevronDown size={16} /></summary>
+                    <ul>{group.services.map((service) => <li key={service}>{service}</li>)}</ul>
+                  </details>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="audience-section" id="audience">
+        <div className="shell">
+          <div className="section-intro">
+            <div><Label>WHO WE SERVE</Label><h2>Technology solutions<br />for <em>everyone.</em></h2></div>
+            <p>Different people have different goals. We work to understand those needs and shape solutions that help each client move forward.</p>
+          </div>
+          <div className="audience-grid">
+            {audiences.map((item) => {
+              const Icon = item.icon;
+              return <article className="audience-card" key={item.title}><Icon size={23} /><h3>{item.title}</h3><p>{item.text}</p></article>;
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="commerce-section" id="commerce">
+        <div className="shell commerce-layout">
+          <div><Label light>BEYOND TECHNOLOGY</Label><h2>Commerce &<br /><em>business services.</em></h2></div>
+          <div className="commerce-copy">
+            <p className="commerce-lead">Creating opportunities beyond technology.</p>
+            <p>Alongside our core technology focus, CroppTech participates in commerce and complementary business activities that create value and expand opportunities.</p>
+            <ul>
+              <li>E-commerce solutions and online business development</li>
+              <li>Digital marketplace support</li>
+              <li>Product sourcing and procurement</li>
+              <li>Trade, commercial opportunities and partnerships</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="perspective-section why-section" id="why-cropptech">
+        <div className="shell perspective-layout">
+          <div className="perspective-title"><Label light>WHY CROP PTECH</Label><h2>More than technology.<br /><em>A partner in progress.</em></h2></div>
+          <div className="strength-grid">
+            {strengths.map(([title, text], index) => <article className="strength-card" key={title}><span>0{index + 1}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="purpose-section">
+        <div className="shell purpose-grid">
+          <article><Label>OUR VISION</Label><h2>Where we’re<br /><em>going.</em></h2><p>To become a trusted technology and digital solutions company, empowering individuals, businesses and organisations through accessible technology, innovation, knowledge and transformative digital services.</p></article>
+          <article><Label>OUR MISSION</Label><h2>What drives<br /><em>our work.</em></h2><p>To deliver professional technology services, develop digital capabilities, promote the adoption of artificial intelligence and provide innovative solutions that enable people and organisations to grow, adapt and succeed.</p></article>
+        </div>
+      </section>
+
+      <section className="contact-section" id="contact">
+        <div className="shell contact-layout">
+          <div className="contact-heading"><Label>LET’S BUILD WITH TECHNOLOGY</Label><h2>Your ideas.<br /><em>Our technology.</em></h2></div>
+          <div className="contact-content">
+            <p className="contact-lead">Whether you want to learn a new technology skill, develop a software solution, integrate AI into your business, improve your IT infrastructure or explore a partnership, CroppTech is ready to start the conversation.</p>
+            <div className="contact-methods">
+              <a className="contact-method" href="mailto:info@cropptech.com"><Mail size={20} /><span><strong>Email</strong><small>info@cropptech.com</small></span></a>
+              <div className="contact-method contact-method-pending"><Phone size={20} /><span><strong>Phone</strong><small>Coming soon</small></span></div>
+            </div>
+            <p className="contact-small">CroppTech — Technology. Skills. Innovation.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <div className="shell footer-main">
+          <div className="footer-brand"><Brand inverse /><p>Technology. Skills. Innovation.</p></div>
+          <div className="footer-links">{nav.map(([label, href]) => <a key={label} href={href}>{label}</a>)}</div>
+          <a className="footer-top-link" href="#top">Back to top <ArrowUpRight size={15} /></a>
+        </div>
+        <div className="shell footer-bottom"><span>© {new Date().getFullYear()} CroppTech. All rights reserved.</span><span>Technology · Skills · Innovation</span></div>
+      </footer>
     </main>
   );
 }
